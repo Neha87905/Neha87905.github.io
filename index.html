@@ -40,11 +40,7 @@ button{
     height:100vh;
 }
 
-video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+
 </style>
 </head>
 
@@ -52,17 +48,16 @@ video{
 
 <div class="container" id="page1">
     <h1>The Dragon Warrior wants to show you something.</h1>
-    <button onclick="showVideo()">Continue</button>
+    <button onclick="showGif()">Continue</button>
 </div>
 
 <div id="page2">
-    <video autoplay loop controls>
-        <source src="kungfu.mp4" type="video/mp4">
-    </video>
+    <img src="kung-fu-panda-po.gif" 
+         style="width:100%;height:100vh;object-fit:cover;">
 </div>
 
 <script>
-function showVideo(){
+function showGif(){
     document.getElementById("page1").style.display="none";
     document.getElementById("page2").style.display="block";
 }
