@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Dragon Warrior</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    text-align:center;
+}
+
+h1{
+    color:white;
+    margin-bottom:30px;
+}
+
+button{
+    padding:15px 40px;
+    font-size:22px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#page2{
+    display:none;
+    width:100%;
+    height:100vh;
+}
+
+video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="page1">
+    <h1>The Dragon Warrior wants to show you something.</h1>
+    <button onclick="showVideo()">Continue</button>
+</div>
+
+<div id="page2">
+    <video autoplay loop controls>
+        <source src="kungfu.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+function showVideo(){
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page2").style.display="block";
+}
+</script>
+
+</body>
+</html>
