@@ -75,10 +75,12 @@ function showGif(){
     music.currentTime = 21;
     music.play();
 
-    setTimeout(function(){
-        music.pause();
-    }, 27000);
-
+    music.ontimeupdate = function(){
+        if(music.currentTime >= 48){
+            music.currentTime = 21;
+            music.play();
+        }
+    };
     document.getElementById("page1").style.display="none";
     document.getElementById("page2").style.display="block";
 }
