@@ -54,6 +54,9 @@ button:hover{
 </head>
 
 <body>
+<audio id="bgMusic">
+    <source src="kung fu fighting.mpeg" type="audio/mpeg">
+</audio>
 
 <div class="container" id="page1">
     <h1>The Dragon Warrior wants to show you something.</h1>
@@ -67,6 +70,15 @@ button:hover{
 
 <script>
 function showGif(){
+    let music = document.getElementById("bgMusic");
+
+    music.currentTime = 21;
+    music.play();
+
+    setTimeout(function(){
+        music.pause();
+    }, 27000);
+
     document.getElementById("page1").style.display="none";
     document.getElementById("page2").style.display="block";
 }
